@@ -1,14 +1,14 @@
 INCLUDEPATH += \
-    ../../Tools/ToolTestQtArrowItems
+    ../TestArrowItems
 
 SOURCES += \
-    ../../Tools/ToolTestQtArrowItems/testqtarrowitemsmenudialog.cpp
+    ../TestArrowItems/testqtarrowitemsmenudialog.cpp
 
 HEADERS += \
-    ../../Tools/ToolTestQtArrowItems/testqtarrowitemsmenudialog.h
+    ../TestArrowItems/testqtarrowitemsmenudialog.h
 
 OTHER_FILES += \
-    ../../Tools/ToolTestQtArrowItems/Licence.txt
+    ../TestArrowItems/Licence.txt
 
 RESOURCES += \
-    ../../Tools/ToolTestQtArrowItems/ToolTestQtArrowItems.qrc
+    ../TestArrowItems/ToolTestQtArrowItems.qrc

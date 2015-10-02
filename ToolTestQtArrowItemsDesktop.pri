@@ -1,16 +1,16 @@
-include(../../Tools/ToolTestQtArrowItems/ToolTestQtArrowItemsConsole.pri)
+include(../TestArrowItems/ToolTestQtArrowItemsConsole.pri)
 
 HEADERS += \
-    ../../Tools/ToolTestQtArrowItems/qttestqtarrowitemsmenudialog.h \
-    ../../Tools/ToolTestQtArrowItems/qttestqtarrowitemscomparedialog.h \
-    ../../Tools/ToolTestQtArrowItems/qttestqtarrowitemsmodifydialog.h
+    ../TestArrowItems/qttestqtarrowitemsmenudialog.h \
+    ../TestArrowItems/qttestqtarrowitemscomparedialog.h \
+    ../TestArrowItems/qttestqtarrowitemsmodifydialog.h
 
 SOURCES += \
-    ../../Tools/ToolTestQtArrowItems/qttestqtarrowitemsmenudialog.cpp \
-    ../../Tools/ToolTestQtArrowItems/qttestqtarrowitemscomparedialog.cpp \
-    ../../Tools/ToolTestQtArrowItems/qttestqtarrowitemsmodifydialog.cpp
+    ../TestArrowItems/qttestqtarrowitemsmenudialog.cpp \
+    ../TestArrowItems/qttestqtarrowitemscomparedialog.cpp \
+    ../TestArrowItems/qttestqtarrowitemsmodifydialog.cpp
 
 FORMS += \
-    ../../Tools/ToolTestQtArrowItems/qttestqtarrowitemsmenudialog.ui \
-    ../../Tools/ToolTestQtArrowItems/qttestqtarrowitemscomparedialog.ui \
-    ../../Tools/ToolTestQtArrowItems/qttestqtarrowitemsmodifydialog.ui
+    ../TestArrowItems/qttestqtarrowitemsmenudialog.ui \
+    ../TestArrowItems/qttestqtarrowitemscomparedialog.ui \
+    ../TestArrowItems/qttestqtarrowitemsmodifydialog.ui
