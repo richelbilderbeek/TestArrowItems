@@ -72,15 +72,6 @@ ribi::Help ribi::TestQtArrowItemsMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::TestQtArrowItemsMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const Program> p {
-    new ProgramTestQtArrowItems
-  };
-  assert(p);
-  return p;
-}
-
 std::string ribi::TestQtArrowItemsMenuDialog::GetVersion() const noexcept
 {
   return "1.3";
