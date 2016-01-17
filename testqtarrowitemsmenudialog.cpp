@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------------
 /*
 TestQtArrowItems, tool to test Qt arrow QGraphicsItems
-Copyright (C) 2012-2015 Richel Bilderbeek
+Copyright (C) 2012-2016 Richel Bilderbeek
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -23,7 +23,6 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 #include <cassert>
 #include <iostream>
 
-#include "richelbilderbeekprogram.h"
 #include "trace.h"
 #include "testtimer.h"
 
@@ -48,11 +47,12 @@ ribi::About ribi::TestQtArrowItemsMenuDialog::GetAbout() const noexcept
     "Richel Bilderbeek",
     "TestQtArrowItems",
     "tool to test Qt arrow QGraphicsItems",
-    "the 1st of Januari 2013",
-    "2012-2015",
+    "January 17th of 2016",
+    "2012-2016",
     "http://www.richelbilderbeek.nl/ToolTestQtArrowItems.htm",
     GetVersion(),
-    GetVersionHistory());
+    GetVersionHistory()
+  );
   //a.AddLibrary("ProFile version: " + ProFile::GetVersion());
   a.AddLibrary("Trace version: " + Trace::GetVersion());
   return a;
@@ -74,7 +74,7 @@ ribi::Help ribi::TestQtArrowItemsMenuDialog::GetHelp() const noexcept
 
 std::string ribi::TestQtArrowItemsMenuDialog::GetVersion() const noexcept
 {
-  return "1.3";
+  return "2.0";
 }
 
 std::vector<std::string> ribi::TestQtArrowItemsMenuDialog::GetVersionHistory() const noexcept
@@ -83,8 +83,9 @@ std::vector<std::string> ribi::TestQtArrowItemsMenuDialog::GetVersionHistory() c
     "2012-12-07: version 0.1: initial version",
     "2013-01-01: version 1.0: added menu",
     "2013-11-05: version 1.1: conformized for ProjectRichelBilderbeekConsole",
-    "2014-07-29: version 1.2: added Modify dialog"
-    "2015-02-08: version 1.3: added legend to Compare dialog"
+    "2014-07-29: version 1.2: added Modify dialog",
+    "2015-02-08: version 1.3: added legend to Compare dialog",
+    "2016-01-17: version 2.0: moved to own GitHub",
   };
 }
 

@@ -1,4 +1,4 @@
-include(../TestArrowItems/ToolTestQtArrowItemsConsole.pri)
+include(../TestArrowItems/TestQtArrowItemsConsole.pri)
 
 HEADERS += \
     ../TestArrowItems/qttestqtarrowitemsmenudialog.h \

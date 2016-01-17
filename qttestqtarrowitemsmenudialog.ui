@@ -19,7 +19,7 @@
    <string>TestQtArrowItems</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ToolTestQtArrowItems.qrc">
+   <iconset resource="TestQtArrowItems.qrc">
     <normaloff>:/images/R.png</normaloff>:/images/R.png</iconset>
   </property>
   <property name="styleSheet">
@@ -69,7 +69,7 @@ QPushButton { font: 48px,&quot;Courier New&quot;,&quot;Courier&quot;, &quot;mono
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolTestQtArrowItems.qrc">:/images/ToolTestQtArrowItemsQuit.png</pixmap>
+      <pixmap resource="TestQtArrowItems.qrc">:/images/TestQtArrowItemsQuit.png</pixmap>
      </property>
     </widget>
    </item>
@@ -95,7 +95,7 @@ QPushButton { font: 48px,&quot;Courier New&quot;,&quot;Courier&quot;, &quot;mono
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolTestQtArrowItems.qrc">:/images/ToolTestQtArrowItemsCompare.png</pixmap>
+      <pixmap resource="TestQtArrowItems.qrc">:/images/TestQtArrowItemsCompare.png</pixmap>
      </property>
     </widget>
    </item>
@@ -121,7 +121,7 @@ QPushButton { font: 48px,&quot;Courier New&quot;,&quot;Courier&quot;, &quot;mono
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolTestQtArrowItems.qrc">:/images/ToolTestQtArrowItemsModify.png</pixmap>
+      <pixmap resource="TestQtArrowItems.qrc">:/images/TestQtArrowItemsModify.png</pixmap>
      </property>
     </widget>
    </item>
@@ -131,7 +131,7 @@ QPushButton { font: 48px,&quot;Courier New&quot;,&quot;Courier&quot;, &quot;mono
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolTestQtArrowItems.qrc">:/images/ToolTestQtArrowItemsAbout.png</pixmap>
+      <pixmap resource="TestQtArrowItems.qrc">:/images/TestQtArrowItemsAbout.png</pixmap>
      </property>
     </widget>
    </item>
@@ -144,7 +144,7 @@ QPushButton { font: 48px,&quot;Courier New&quot;,&quot;Courier&quot;, &quot;mono
   <tabstop>button_quit</tabstop>
  </tabstops>
  <resources>
-  <include location="ToolTestQtArrowItems.qrc"/>
+  <include location="TestQtArrowItems.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------------
 /*
 TestQtArrowItems, tool to test Qt arrow QGraphicsItems
-Copyright (C) 2012-2015 Richel Bilderbeek
+Copyright (C) 2012-2016 Richel Bilderbeek
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -57,6 +57,7 @@ ribi::QtTestQtArrowItemsCompareDialog::QtTestQtArrowItemsCompareDialog(QWidget *
   assert(this->ui->view->scene());
 
   const double pi = boost::math::constants::pi<double>();
+  #define FIX_ISSUE_256
   #ifdef FIX_ISSUE_256
   //Add normal arrows
   {

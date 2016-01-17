@@ -11,4 +11,4 @@ OTHER_FILES += \
     ../TestArrowItems/Licence.txt
 
 RESOURCES += \
-    ../TestArrowItems/ToolTestQtArrowItems.qrc
+    ../TestArrowItems/TestQtArrowItems.qrc
