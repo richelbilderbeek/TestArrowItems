@@ -42,7 +42,7 @@ ribi::QtTestQtArrowItemsModifyDialog::QtTestQtArrowItemsModifyDialog(QWidget *pa
 
   {
     QTimer * const timer = new QTimer(this);
-    QObject::connect(timer,&QTimer::timeout,this,&ribi::QtTestQtArrowItemsModifyDialog::DoSomethingRandom);
+    QObject::connect(timer,SIGNAL(timeout()),this,SLOT(DoSomethingRandom()));
     timer->setInterval(100);
     timer->start();
   }
