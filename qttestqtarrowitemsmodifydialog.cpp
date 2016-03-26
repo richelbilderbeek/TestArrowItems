@@ -94,11 +94,6 @@ boost::shared_ptr<ribi::QtQuadBezierArrowItem> ribi::QtTestQtArrowItemsModifyDia
   return item;
 }
 
-void ribi::QtTestQtArrowItemsModifyDialog::DoSomethingRandom() noexcept
-{
-
-}
-
 void ribi::QtTestQtArrowItemsModifyDialog::on_button_set_item_clicked()
 {
   const auto item = CreateRandomArrow();

@@ -47,8 +47,6 @@ private:
   boost::shared_ptr<QtQuadBezierArrowDialog> m_dialog_right;
 
   static boost::shared_ptr<QtQuadBezierArrowItem> CreateRandomArrow() noexcept;
-  void DoSomethingRandom() noexcept;
-
 
   #ifndef NDEBUG
   static void Test() noexcept;
