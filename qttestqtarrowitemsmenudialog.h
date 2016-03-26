@@ -54,12 +54,8 @@ private:
 private slots:
   void on_button_about_clicked();
   void on_button_compare_clicked();
-  void on_button_quit_clicked();
-
-  #ifndef NDEBUG
-  static void Test() noexcept;
-  #endif
   void on_button_modify_clicked();
+  void on_button_quit_clicked();
 };
 
 } //~namespace ribi
