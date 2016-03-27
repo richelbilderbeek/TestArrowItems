@@ -49,9 +49,6 @@ ribi::QtTestQtArrowItemsCompareDialog::QtTestQtArrowItemsCompareDialog(QWidget *
   : QtHideAndShowDialog(parent),
     ui(new Ui::QtTestQtArrowItemsCompareDialog)
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
   ui->setupUi(this);
 
   assert(this->ui->view->scene());
@@ -293,19 +290,3 @@ void ribi::QtTestQtArrowItemsCompareDialog::OnRequestSceneUpdate()
 {
   this->ui->view->scene()->update();
 }
-
-#ifndef NDEBUG
-void ribi::QtTestQtArrowItemsCompareDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  {
-    Random();
-    QtTestQtArrowItemsCompareDialog();
-  }
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-}
-#endif

@@ -32,6 +32,11 @@ public:
   void SetArrow(const boost::shared_ptr<QtQuadBezierArrowItem>& arrow) noexcept;
   boost::shared_ptr<QtQuadBezierArrowItem> GetArrow() const noexcept;
 
+  const QtQuadBezierArrowDialog * GetDialogLeft()  const noexcept { return m_dialog_left.get();  }
+        QtQuadBezierArrowDialog * GetDialogLeft()        noexcept { return m_dialog_left.get();  }
+  const QtQuadBezierArrowDialog * GetDialogRight() const noexcept { return m_dialog_right.get(); }
+        QtQuadBezierArrowDialog * GetDialogRight()       noexcept { return m_dialog_right.get(); }
+
 protected:
   void keyPressEvent(QKeyEvent * event);
 
@@ -46,8 +51,9 @@ private:
   boost::shared_ptr<QtQuadBezierArrowDialog> m_dialog_left;
   boost::shared_ptr<QtQuadBezierArrowDialog> m_dialog_right;
 
-  static boost::shared_ptr<QtQuadBezierArrowItem> CreateRandomArrow() noexcept;
 };
+
+boost::shared_ptr<QtQuadBezierArrowItem> CreateRandomArrow() noexcept;
 
 } //~namespace ribi
 

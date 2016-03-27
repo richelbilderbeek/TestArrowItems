@@ -24,9 +24,6 @@ ribi::QtTestQtArrowItemsModifyDialog::QtTestQtArrowItemsModifyDialog(QWidget *pa
     m_dialog_left(new QtQuadBezierArrowDialog),
     m_dialog_right(new QtQuadBezierArrowDialog)
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
   ui->setupUi(this);
 
   for (const auto& widget: { ui->widget_left,ui->widget_right })
@@ -79,7 +76,7 @@ void ribi::QtTestQtArrowItemsModifyDialog::keyPressEvent(QKeyEvent * event)
   if (event->key() == Qt::Key_Escape) { close(); return; }
 }
 
-boost::shared_ptr<ribi::QtQuadBezierArrowItem> ribi::QtTestQtArrowItemsModifyDialog::CreateRandomArrow() noexcept
+boost::shared_ptr<ribi::QtQuadBezierArrowItem> ribi::CreateRandomArrow() noexcept
 {
 
   auto from = new QGraphicsSimpleTextItem("From");
@@ -119,49 +116,4 @@ void ribi::QtTestQtArrowItemsModifyDialog::SetArrow(const boost::shared_ptr<QtQu
   assert(ui->view_left->scene() == ui->view_right->scene());
   ui->view_left->scene()->clear();
   ui->view_left->scene()->addItem(arrow.get());
-
 }
-
-#ifndef NDEBUG
-void ribi::QtTestQtArrowItemsModifyDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  {
-    Random();
-  }
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-  const bool verbose{false};
-  QtTestQtArrowItemsModifyDialog d;
-  d.show();
-  if (verbose) { TRACE("Must get after set"); }
-  {
-    const auto arrow = CreateRandomArrow();
-    d.SetArrow(arrow);
-    assert(d.GetArrow() == arrow);
-  }
-  if (verbose) { TRACE("Changing the mid X via UI, must change the arrow"); }
-  {
-    const auto arrow = CreateRandomArrow();
-    d.SetArrow(arrow);
-    const double old_x{arrow->GetMidX()};
-    const double new_x{old_x + 10.0};
-    assert(new_x != old_x);
-    d.m_dialog_left->SetUiMidX(new_x);
-    assert(std::abs(arrow->GetMidX() - new_x) < 2.0);
-  }
-  if (verbose) { TRACE("Changing the mid X via arrow, must change the UI"); }
-  {
-    const auto arrow = CreateRandomArrow();
-    d.SetArrow(arrow);
-    const double old_x{arrow->GetMidX()};
-    const double new_x{old_x + 10.0};
-    assert(new_x != old_x);
-    arrow->SetMidX(new_x);
-    assert(std::abs(d.m_dialog_left->GetUiMidX() - new_x) < 2.0);
-  }
-}
-#endif

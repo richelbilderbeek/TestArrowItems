@@ -41,9 +41,6 @@ ribi::QtTestQtArrowItemsMenuDialog::QtTestQtArrowItemsMenuDialog(QWidget *parent
     QtHideAndShowDialog(parent),
     ui(new Ui::QtTestQtArrowItemsMenuDialog)
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
   ui->setupUi(this);
 }
 
@@ -84,20 +81,3 @@ void ribi::QtTestQtArrowItemsMenuDialog::on_button_quit_clicked()
 {
   close();
 }
-
-#ifndef NDEBUG
-void ribi::QtTestQtArrowItemsMenuDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  TestQtArrowItemsMenuDialog();
-  QtTestQtArrowItemsModifyDialog();
-  QtTestQtArrowItemsCompareDialog();
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-}
-#endif
-
-
