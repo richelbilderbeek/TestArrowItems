@@ -33,3 +33,4 @@ debug/
 mocinclude.tmp
 object_script*
 *plugin_import.cpp
+*.pro.user
