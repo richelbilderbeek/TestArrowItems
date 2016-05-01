@@ -34,8 +34,8 @@ int ribi::TestQtArrowItemsMenuDialog::ExecuteSpecific(const std::vector<std::str
     std::cout << GetHelp() << '\n';
     return 1;
   }
-  assert(!"TODO");
-  return 1;
+  std::cout << "Cannot run TestQtArrowItemsMenuDialog from the command line." << '\n';
+  return 0;
 }
 
 ribi::About ribi::TestQtArrowItemsMenuDialog::GetAbout() const noexcept
@@ -71,7 +71,7 @@ ribi::Help ribi::TestQtArrowItemsMenuDialog::GetHelp() const noexcept
 
 std::string ribi::TestQtArrowItemsMenuDialog::GetVersion() const noexcept
 {
-  return "2.0";
+  return "2.1";
 }
 
 std::vector<std::string> ribi::TestQtArrowItemsMenuDialog::GetVersionHistory() const noexcept
@@ -83,5 +83,6 @@ std::vector<std::string> ribi::TestQtArrowItemsMenuDialog::GetVersionHistory() c
     "2014-07-29: version 1.2: added Modify dialog",
     "2015-02-08: version 1.3: added legend to Compare dialog",
     "2016-01-17: version 2.0: moved to own GitHub",
+    "2016-05-01: version 2.1: notify that command-line-only version does nothing",
   };
 }
