@@ -158,8 +158,6 @@ ribi::QtTestQtArrowItemsCompareDialog::QtTestQtArrowItemsCompareDialog(QWidget *
       rects.push_back(rect);
 
 
-      //rect->m_signal_request_scene_update.connect(
-      //  boost::bind(&ribi::QtTestQtArrowItemsCompareDialog::OnRequestSceneUpdate,this));
     }
     for (int i=0; i<n_items-2; i+=3)
     {
@@ -212,8 +210,6 @@ ribi::QtTestQtArrowItemsCompareDialog::QtTestQtArrowItemsCompareDialog(QWidget *
       this->ui->view->scene()->addItem(rect);
       rects.push_back(rect);
 
-      //rect->m_signal_request_scene_update.connect(
-      //  boost::bind(&ribi::QtTestQtArrowItemsCompareDialog::OnRequestSceneUpdate,this));
     }
     for (int i=0; i<n_items-1; i+=2)
     {
@@ -255,8 +251,6 @@ ribi::QtTestQtArrowItemsCompareDialog::QtTestQtArrowItemsCompareDialog(QWidget *
       assert(!rect->scene());
       this->ui->view->scene()->addItem(rect);
       rects.push_back(rect);
-      //rect->m_signal_request_scene_update.connect(
-      //  boost::bind(&ribi::QtTestQtArrowItemsCompareDialog::OnRequestSceneUpdate,this));
     }
     for (int i=0; i<n_items-1; i+=2)
     {
@@ -288,5 +282,6 @@ void ribi::QtTestQtArrowItemsCompareDialog::keyPressEvent(QKeyEvent* event)
 
 void ribi::QtTestQtArrowItemsCompareDialog::OnRequestSceneUpdate()
 {
+  assert(!"Am I called?");
   this->ui->view->scene()->update();
 }
